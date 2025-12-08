@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    background-color: hsl(0, 0%, 7%);
+    color: hsl(0, 0%, 90%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.logo {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: hsl(48, 100%, 50%);
+    text-shadow: 2px 2px 5px black;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header{
+    background-color: hsl(0, 0%, 12%);
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid hsl(0, 80%, 40%);
+}
+.navbar ul{
+    list-style-type:none;
+    background-color: #1c1c1c; 
+    padding: 0px;
+    margin: 0px;
+    overflow:hidden;
+     background-color: hsl(0, 0%, 12%);
+}
+.navbar a{
+    color: hsl(0, 0%, 98%);
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    transition: 0.75s;
+    font-weight: bold;
+
+}
+.navbar a:hover{
+     background-color: hsl(0, 80%, 40%);
+    color: hsl(48, 100%, 50%);
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.navbar li{
+    position: relative;
+    float: none;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 10%);
+    min-width: 150px;
+    border: 2px solid hsl(0, 80%, 40%);
+    z-index: 10;
+}
+.dropdown-menu li {
+   float: none;
+}
+.dropdown-menu a:hover {
+    background-color: hsl(0, 80%, 40%);
+}
+section{
+    width: 70%;
+    float: left;
+    padding: 10px;
+}
+article{
+    width:30%;
+    float: left ;
+    padding: 10px;
+}
+footer{
+    
+    clear: both;
+    background-color: hsl(0, 0%, 12%);
+    text-align: center;
+    padding: 20px;
+     color: hsl(0, 0%, 80%);
+    border-top: 3px solid hsl(0, 80%, 40%);
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer a:hover {
+    color: white;
+}
+footer a {
+    color: hsl(48, 100%, 50%);
+    text-decoration: none;
+    margin: 0 5px;
+}
+@media screen and (max-width:600px){
+    section, article{
+        width: 100%;
+    }
+    .header-container{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction:colum ;
+        width: 100%;
+    }
+    .navbar a{
+        padding:12px;
+    }
+     .navbar li {
+        float: none;
+    }
+    .dropdown-menu{
+        position: static;
+        width: 100%;
+    }
+}
+table.kutu{
+           
+    font-family:  Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    background-color: hsl(0, 0%, 12%);
+    padding: 20px;
+    border: 2px solid hsl(0, 80%, 40%);
+    
+    border-radius: 10px;
+    color: hsl(0, 0%, 95%);
+        }
+table.kutu input[type="text"],
+table.kutu input[type="password"] {
+    padding: 7px;
+    width: 200px;
+    border: 1px solid hsl(0, 0%, 30%);
+    background-color: hsl(0, 0%, 7%);
+    color: hsl(0, 0%, 95%);
+}
+
+table.kutu input[type="submit"] {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: hsl(0, 80%, 40%);
+    transition: 0.3s ease;
+}
+
+table.kutu input[type="submit"]:hover {
+    background-color: hsl(48, 100%, 50%);
+    color: black;
+}
+.about{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact{
+    font-family: Arial, Helvetica, sans-serif;
+}
+

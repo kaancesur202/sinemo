@@ -4,62 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sinemo Ana Sayfa</title>
-    <style type="text/css">
-        .kutu{
-            background-color: rgb(80, 80, 80);
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 1px;
-            border-color: black;
-            border-style: solid;
-            font-family:  Helvetica, Arial, sans-serif;
-            
-        }
-        
-    </style> 
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background-color:rgb(80, 80, 80)">
-   
-    <!-- Navigasyon çubuğu-->
-     <table class="kutu">
-    <tr>
-        <td>
-            <a href="index.html" target="_blank"><img src="images/index2.png" alt="Resim yüklenemedi" height="20%" width="20%"></a>
-        </td>
-        <td>
-            <a href="hakkimizda.html" target="_blank"><img src="images/hakkimizda2.png" alt="Resim yüklenemedi" height="20%" width="20%"></a>
-        </td>
-        <td> 
-            <a href="foto_galeri.html" target="_blank"><img src="images/foto_galeri.png" alt="Resim yüklenemedi" height="20%" width="20%"></a>
-        </td>
-        <td>
-            <a href="iletisim.html" target="_blank"><img src="images/iletisim.png" alt="Resim yüklenemedi" height="20%" width="20%"></a>
-        </td>
-         <td>
-                <a href="profil.html"><img src="images/profil.png" alt="resim yüklenemedi" height="30px" width="30px" ></a>
-            </td>
-            <td> <h4> Profil </h4>
-            </td>
-    </tr>
-    </table>
-<table class="kutu" style="width: 35%; height:" >
-<form action=""; method="get">
-    <tr>
-        <td>
-            <img src="images/search.png" alt="resim yüklenemedi" height="30px" width="30px">
-        </td>
-        <td>
-      
-                 <input type="text">
-        </td>
-        <td>
-     <input type="submit" value="Ara" style="background-color: darkred;"> 
-     </td>
-    </tr>
-   
-</form>
+<body>
+ <header>
+  <div class="header-container">
+    <div class="logo">Sinemo</div>
+    <nav class="navbar"> 
+        <ul class="menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="about.html">Hakkımızda</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+            <li class="dropdown">
+                    <a href="#">Filmler</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Aksiyon</a></li>
+                        <li><a href="#">Komedi</a></li>
+                        <li><a href="#">Bilim Kurgu</a></li>
+                    </ul>
+                </li>
+            <li><a href="#" id="profileLink">Profil</a></li>
+        </ul>
+    </nav>
+   </div>
+ </header>
 
+ <main>
+    <section>
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ullam, libero fuga corrupti tenetur aspernatur fugiat odit voluptatum ipsa aperiam recusandae non laudantium a nobis accusantium? Possimus cumque delectus repudiandae.</h1>
+    </section>
+    
+    <article>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reiciendis magnam consectetur deserunt, temporibus odit dolorem repudiandae quod architecto cupiditate iste harum. Ratione similique corrupti vero quas dolores molestias. Est!</h1>
+    </article>
+ </main>
 
+ <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                &copy; 2025 Sinemo - Tüm hakları saklıdır.
+            </div>
+
+            <div class="footer-right">
+                <a href="about.html">Hakkımızda</a> |
+                <a href="contact.html">İletişim</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
