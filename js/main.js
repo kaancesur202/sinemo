@@ -2,7 +2,7 @@
 let isLoggedIn = false;
 
 
-document.getElementById("profileLink").addEventListener("click", function(e){
+document.getElementById("profileLink").addEventListener("click", function (e){
     e.preventDefault();
     
     if(isLoggedIn){
@@ -11,3 +11,7 @@ document.getElementById("profileLink").addEventListener("click", function(e){
         window.location.href = "login.html"; 
     }
 });
+
+function mesaj_gönder(){
+    alert("Mesaj gönderildi");
+}
