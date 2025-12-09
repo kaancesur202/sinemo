@@ -1,0 +1,193 @@
+
+.hero-section {
+    width: 100%;
+    min-height: 350px;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(40, 0, 0, 0.6)
+    ),
+    url("images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    padding: 60px 30px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: hsl(48, 100%, 50%);
+    text-shadow: 2px 2px 10px black;
+}
+
+.hero-text p {
+    font-size: 18px;
+    max-width: 550px;
+    line-height: 1.5;
+    color: hsl(0, 0%, 90%);
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: hsl(0, 80%, 40%);
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: hsl(48, 100%, 50%);
+    color: black;
+}
+.featured-movies {
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.featured-movies h2 {
+    color: hsl(48, 100%, 50%);
+    font-size: 30px;
+}
+
+.section-description {
+    font-size: 15px;
+    margin-bottom: 25px;
+    color: hsl(0, 0%, 80%);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: hsl(0, 0%, 12%);
+    border: 1px solid hsl(0, 0%, 25%);
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.movie-card:hover {
+    transform: scale(1.03);
+    border-color: hsl(48, 100%, 50%);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 280px;
+    background-color: hsl(0, 0%, 18%);
+    border-radius: 8px;
+}
+
+.movie-card h3 {
+    margin-top: 12px;
+}
+
+.rating {
+    margin: 5px 0;
+    color: hsl(48, 100%, 50%);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px;
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 6px;
+    text-decoration: none;
+    color: hsl(0, 0%, 90%);
+    transition: 0.25s;
+}
+
+.btn-secondary:hover {
+    background-color: hsl(0, 80%, 40%);
+    color: white;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.genres-explore {
+    margin-top: 40px;
+}
+
+.genre-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.genre-item {
+    padding: 10px 18px;
+    background-color: hsl(0, 0%, 12%);
+    border: 2px solid hsl(48, 100%, 50%);
+    border-radius: 6px;
+    text-decoration: none;
+    color: hsl(0, 0%, 95%);
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.genre-item:hover {
+    background-color: hsl(48, 100%, 50%);
+    color: black;
+}
+
+.latest-reviews {
+    margin-top: 40px;
+}
+
+.review-list {
+    display: grid;
+    gap: 20px;
+}
+
+.review-item {
+    background-color: hsl(0, 0%, 12%);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid hsl(0, 0%, 25%);
+}
+
+.review-item h3 {
+    color: hsl(48, 100%, 50%);
+}
+
+.review-item p {
+    margin: 10px 0;
+}
+
+.read-more {
+    text-decoration: none;
+    color: hsl(0, 80%, 40%);
+    font-weight: bold;
+}
+
+.read-more:hover {
+    color: hsl(48, 100%, 50%);
+}
+
+@media screen and (max-width: 700px) {
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .image-placeholder {
+        height: 200px;
+    }
+}
