@@ -15,3 +15,10 @@ document.getElementById("profileLink").addEventListener("click", function (e){
 function mesaj_gönder(){
     alert("Mesaj gönderildi");
 }
+function openImg(src){
+    document.getElementById("bigImg").src = src;
+    document.getElementById("modal").style.display =" flex";
+}
+function closeImg(){
+    document.getElementById("modal").style.display ="none";
+}
