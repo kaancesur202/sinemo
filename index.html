@@ -42,10 +42,20 @@
         <h1>Sinema Dünyasını Keşfet</h1>
         <p>En güncel film incelemeleri, fragmanlar ve kişiselleştirilmiş öneriler tek adreste.</p>
         <a href="filmler.html" class="btn-primary">Tüm Filmleri Gör</a>
+        <div class="search-box">
+            <input type="text" id="movieInput" placeholder="Film adı yazın...">
+            <button id="searchBtn" class="btn-primary">Ara</button>
+        </div>
     </div>
 </section>
 
 <hr>
+<section id="searchSection" class="featured-movies hidden">
+    <h2>Arama Sonuçları</h2>
+    <div id="searchResultsList" class="movie-list grid-container">
+        </div>
+    <hr>
+</section>
 
 <section class="featured-movies">
     <h2>Haftanın Öne Çıkanları</h2>
@@ -53,79 +63,32 @@
         Editörlerimizin bu hafta mutlaka izlenmeli dediği yapımlar.
     </p>
 
-    <div class="movie-list grid-container">
-
-        <article class="movie-card placeholder-card">
-            <div class="image-placeholder"></div>
-            <h3>[Film Başlığı 1]</h3>
-            <p class="rating">Puan: Yükleniyor...</p>
-            <a href="#" class="btn-secondary disabled">İncele</a>
-        </article>
-
-        <article class="movie-card placeholder-card">
-            <div class="image-placeholder"></div>
-            <h3>[Film Başlığı 2]</h3>
-            <p class="rating">Puan: Yükleniyor...</p>
-            <a href="#" class="btn-secondary disabled">İncele</a>
-        </article>
-
-        <article class="movie-card placeholder-card">
-            <div class="image-placeholder"></div>
-            <h3>[Film Başlığı 3]</h3>
-            <p class="rating">Puan: Yükleniyor...</p>
-            <a href="#" class="btn-secondary disabled">İncele</a>
-        </article>
-
+    <div id="featured-container" class="movie-list grid-container">
+        <p style="text-align:center; width:100%;">Yükleniyor...</p>
     </div>
 </section>
-
-
-
 <section class="genres-explore">
     <h2>Türlere Göre Hızlı Erişim</h2>
     <div class="genre-list">
-        <a href="filmler.html?tur=aksiyon" class="genre-item">Aksiyon</a>
-        <a href="filmler.html?tur=dram" class="genre-item">Dram</a>
-        <a href="filmler.html?tur=komedi" class="genre-item">Komedi</a>
-        <a href="filmler.html?tur=bilim-kurgu" class="genre-item">Bilim Kurgu</a>
-        <a href="filmler.html?tur=gerilim" class="genre-item">Gerilim</a>
-        <a href="filmler.html?tur=animasyon" class="genre-item">Animasyon</a>
+        <a href="filmler.html?tur=28" class="genre-item">Aksiyon</a>
+        <a href="filmler.html?tur=18" class="genre-item">Dram</a>
+        <a href="filmler.html?tur=35" class="genre-item">Komedi</a>
+        <a href="filmler.html?tur=878" class="genre-item">Bilim Kurgu</a>
+        <a href="filmler.html?tur=53" class="genre-item">Gerilim</a>
+        <a href="filmler.html?tur=16" class="genre-item">Animasyon</a>
     </div>
 </section>
-
-
-
 <section class="latest-reviews">
     <h2>En Yeni İncelemeler</h2>
     <p class="section-description">
         Kullanıcılarımızdan ve editörlerimizden gelen en taze yorumlar.
     </p>
 
-    <div class="review-list">
-
-        <article class="review-item placeholder-review">
-            <h3>İnceleme 1</h3>
-            <p>
-                Kısa Özet.
-            </p>
-            <a href="#" class="read-more">Devamını Oku...</a>
-        </article>
-
-        <article class="review-item placeholder-review">
-            <h3>İnceleme 2</h3>
-            <p>
-                Kısa Özet.
-            </p>
-            <a href="#" class="read-more">Devamını Oku...</a>
-        </article>
-
+    <div id="reviews-container" class="review-list">
+        <p>Yükleniyor...</p>
     </div>
 </section>
-
 </main>
-
-
-
  <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-left">
@@ -140,7 +103,7 @@
             </div>
         </div>
     </footer>
-
     <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
 </body>
 </html>
