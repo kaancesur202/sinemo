@@ -4,7 +4,6 @@ const searchInput = document.getElementById('movieInput');
 const searchSection = document.getElementById('searchSection');
 const searchResultsList = document.getElementById('searchResultsList');
 
-
 document.addEventListener('DOMContentLoaded', () => {
     loadFeaturedMovies(); 
     loadLatestReviews();  
@@ -35,26 +34,40 @@ function displaySearchResults(movies) {
     searchResultsList.innerHTML = '';
     searchSection.classList.remove('hidden');
     
-    // Show top 4 results only
+    
     movies.slice(0, 4).forEach(movie => {
         if(movie.poster_path) createMovieCard(movie, searchResultsList);
     });
 }
 
-async function loadFeaturedMovies() {
+async function loadFeaturedMovies(mode = "trending", genreId = null) {
     const container = document.getElementById('featured-container');
-   
-    const url = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}&language=tr-TR`;
-
+    let url = "";
+    let top;
+    if (mode === "trending") {
+        url = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}&language=tr-TR`;
+    } 
+    else if (mode === "genre" && genreId) {
+        url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=tr-TR&with_genres=${genreId}&sort_by=popularity.desc`;
+    } else {
+        console.error("mode id hata");
+        return;
+    }
     try {
         const res = await fetch(url);
         const data = await res.json();
         container.innerHTML = ''; 
-
-        
-        const top4 = data.results.slice(0, 4);
-
-        top4.forEach(movie => {
+        if (!data.results || data.results.length === 0) {
+            container.innerHTML = '<p>Film bulunamadı.</p>';
+            return;
+        }
+        if (mode === "trending") {
+            top = data.results.slice(0, 4);
+        } 
+        else  {
+            top = data.results.slice(0, 16);
+        }
+        top.forEach(movie => {
             createMovieCard(movie, container);
         });
 
@@ -92,18 +105,27 @@ async function loadLatestReviews() {
         container.innerHTML = '';
 
         const reviews = data.results.slice(0, 2);
-
+        
         reviews.forEach(movie => {
             const reviewItem = document.createElement('article');
             reviewItem.className = 'review-item';
             const shortOverview = movie.overview.length > 150 
                 ? movie.overview.substring(0, 150) + "..." 
                 : movie.overview;
+            const posterUrl = movie.poster_path
+                ? `https://image.tmdb.org/t/p/w200${movie.poster_path}`
+                : 'images/no-poster.png';
+        
             reviewItem.innerHTML = `
-                <h3>${movie.title} - Editörün Seçimi</h3>
-                <p>"${shortOverview}"</p>
-                <a href="https://www.themoviedb.org/movie/${movie.id}" target="_blank" class="read-more">Devamını Oku...</a>
-            `;
+                <div class="review-poster">
+                     <img src="${posterUrl}" alt="${movie.title}">
+                    </div>
+                <div class="review-content">
+                    <h3>${movie.title} - Editörün Seçimi</h3>
+                    <p>"${shortOverview}"</p>
+                    <a href="https://www.themoviedb.org/movie/${movie.id}" target="_blank" class="read-more">Devamını Oku...</a>
+                </div>
+                `;
             container.appendChild(reviewItem);
         });
 

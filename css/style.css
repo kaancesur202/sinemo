@@ -42,7 +42,7 @@ header{
     background-color: #1c1c1c; 
     padding: 0px;
     margin: 0px;
-    overflow:hidden;
+    overflow:visible;
      background-color: hsl(0, 0%, 12%);
 }
 .navbar a{
@@ -67,33 +67,48 @@ header{
     position: relative;
     float: none;
 }
-.dropdown:hover .dropdown-menu {
-    display: block;
+.nav {
+    list-style: none;
+}
+.dropdown {
+    position: relative; 
 }
 .dropdown-menu {
     display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     background-color: hsl(0, 0%, 10%);
-    min-width: 150px;
+    min-width: 180px;
     border: 2px solid hsl(0, 80%, 40%);
     z-index: 10;
 }
 .dropdown-menu li {
-   float: none;
+    list-style: none;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
 }
 .dropdown-menu a:hover {
     background-color: hsl(0, 80%, 40%);
 }
-section{
-    width: 70%;
-    float: left;
-    padding: 10px;
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
-article{
-    width:30%;
-    float: left ;
-    padding: 10px;
+
+
+section {
+    width: 100%;   
+    float: none;  
+    display: block;
 }
+article {
+    width: auto;   
+    float: none;   
+} 
 footer{
     
     clear: both;
@@ -138,7 +153,35 @@ footer a {
         width: 100%;
     }
 }
+.profile-section {
+    max-width: 500px;
+    margin: 400px auto;
+    min-height: ;
+    padding: 25px;
+    background-color: hsl(0, 0%, 12%);
+    border: 2px solid hsl(0, 80%, 40%);
+    text-align: center;
+}
 
+.profile-section h2 {
+    margin-bottom: 20px;
+    color: hsl(48, 100%, 50%);
+}
+
+.profile-section p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.profile-section a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: hsl(0, 80%, 40%);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
 
 
